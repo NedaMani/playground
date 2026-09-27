@@ -1,0 +1,11 @@
+packages:
+  - "experiments/*"
+
+# Workaround for a publishing bug in @better-i18n/use-intl@0.10.1: its
+# dependency on @better-i18n/core is left as the literal string
+# "workspace:^" in the published package.json (a leftover monorepo
+# protocol reference that was never rewritten to a real semver range).
+# Pin it to the latest published version so install can resolve at all.
+# See experiments/better-i18n/README.md.
+overrides:
+  "@better-i18n/core": "^0.14.2"

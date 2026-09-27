@@ -1,0 +1,27 @@
+{
+  "name": "paraglide",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "predev": "pnpm run messages:compile",
+    "dev": "vite",
+    "prebuild": "pnpm run messages:compile",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "messages:compile": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide --emit-ts-declarations"
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@inlang/paraglide-js": "^2.25.4",
+    "@inlang/plugin-message-format": "^4.4.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
+  }
+}

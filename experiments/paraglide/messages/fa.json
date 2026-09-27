@@ -1,0 +1,34 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "app_title": "آزمایشگاه پاراگلاید",
+  "language_label": "زبان",
+  "basic_message_heading": "پیام ساده",
+  "hello_world": "سلام دنیا!",
+  "interpolation_heading": "درون‌یابی",
+  "greeting": "سلام، {name}!",
+  "pluralization_heading": "جمع‌بندی",
+  "inbox_message_count": [
+    {
+      "declarations": ["input count", "local countPlural = count: plural"],
+      "selectors": ["countPlural"],
+      "match": {
+        "countPlural=one": "شما {count} پیام دارید.",
+        "countPlural=other": "شما {count} پیام دارید."
+      }
+    }
+  ],
+  "formatting_heading": "قالب‌بندی متناسب با زبان",
+  "today_is": [
+    {
+      "declarations": [
+        "input today",
+        "local formattedToday = today: datetime dateStyle=long"
+      ],
+      "match": {
+        "today=*": "امروز {formattedToday} است."
+      }
+    }
+  ],
+  "generated_code_heading": "توابع پیام تایپ‌شده‌ی تولیدشده",
+  "generated_code_body": "هر کلید بالا یک تابع واقعی TypeScript است که از src/paraglide/messages.js صادر شده و توسط کامپایلر Paraglide از روی messages/en.json و messages/fa.json ساخته شده است."
+}

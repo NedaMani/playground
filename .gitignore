@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+
+# pnpm
+.pnpm-store/
+.pnpm-debug.log*
+
+# Build output
+dist/
+dist-ssr/
+build/
+*.local
+
+# Lingui compiled catalogs (regenerate with `pnpm --filter lingui compile`)
+experiments/lingui/src/locales/**/*.js
+experiments/lingui/src/locales/**/*.d.ts
+
+# Paraglide generated messages/runtime (regenerate with `pnpm --filter paraglide messages:compile`)
+# project.inlang/ has its own .gitignore (everything except settings.json)
+experiments/paraglide/src/paraglide/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Env files - never commit secrets
+.env
+.env.local
+.env.*.local
+
+# TypeScript build info
+*.tsbuildinfo
